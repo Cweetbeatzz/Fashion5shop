@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Fashion5{% endblock%}</title>
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/site.css' %}" />
+ </head>
+<body>
+ {% include 'navbar.html'%}
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            {% block content%}
+            {% endblock%}
+        </main>
+    </div>
+{% include 'footer.html'%}
+    <script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
+     <script src="{% static '/jquery/dist/jquery.min.js' %}"></script>
+</body>
+</html>
