@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  pgdb:
+    container_name: Postgres_Fashion5
+    image: postgres
+    restart: always
+    ports:
+      -5432:5432
+    enviroment:
+      -POSTGRES_DB=Fashion5  
+      -POSTGRES_USER=postgres  
+      -POSTGRES_PASSWORD=1234567890  

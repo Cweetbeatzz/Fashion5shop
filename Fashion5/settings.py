@@ -96,12 +96,12 @@ DATABASES = {
 
 # DATABASES = {
 #     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
+#         "ENGINE": "django.db.backends.postgresql_psycopg2",
 #         "NAME": "Fashion5",
 #         "USER": "postgres",
 #         "PASSWORD": "1234567890",
 #         "HOST": "localhost",
-#         "PORT": "",
+#         "PORT": "5432",
 #     }
 # }
 
