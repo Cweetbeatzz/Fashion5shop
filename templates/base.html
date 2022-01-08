@@ -7,8 +7,9 @@
     <title>{% block title %}Fashion5{% endblock%}</title>
     <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static '/css/site.css' %}" />
+    
  </head>
-<body>
+<body >
  {% include 'navbar.html'%}
     <div class="container-fluid">
         <main role="main" class="pb-3">
@@ -17,7 +18,7 @@
         </main>
     </div>
 {% include 'footer.html'%}
-    <script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
      <script src="{% static '/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
