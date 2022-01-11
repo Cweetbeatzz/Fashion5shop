@@ -1,11 +1,22 @@
 from django.shortcuts import render
-from .models import Register
+
+from accounts2.forms import CreateUserForm
+
+# from .models import Register
+from django.contrib.auth.forms import UserCreationForm
 
 ############################################
 
 # Create your views here.
 def register_view(request):
-    return render(request, "register.html")
+    form = CreateUserForm()
+
+    if request.method == "post":
+        form = CreateUserForm(request.post)
+        if form.is_valid():
+            form.save()
+
+    return render(request, "register.html", {"form": form})
 
 
 ############################################

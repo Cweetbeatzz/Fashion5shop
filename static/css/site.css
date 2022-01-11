@@ -222,6 +222,13 @@ body {
   color: lightblue;
 }
 
+.artwork {
+  border-radius: 20px 20px;
+}
+
+#dasboardcards {
+  width: auto;
+}
 /*#########################################################################################################################################*/
 
 @media (max-width: 1400px) {
@@ -292,6 +299,10 @@ body {
     grid-template-columns: repeat(2, 150px);
     justify-content: center;
     gap: 2px;
+  }
+
+  #dasboardcards {
+    width: auto;
   }
 }
 

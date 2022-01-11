@@ -13,10 +13,13 @@ from django.contrib.auth import login, logout
 # Create your views here.
 
 ##########################################################################
+
 @login_required
 def dashboard(request):
     return render(request, "dashboard.html", {"section": "profile", "orders": "orders"})
-    ##########################################################################
+
+
+##########################################################################
 
 
 def register(request):

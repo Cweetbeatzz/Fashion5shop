@@ -9,7 +9,8 @@
     <div class="row text-center p-3">
       <div class="col-md-6 mx-auto">
         <form method="post" class="" action=".">
-          {% csrf_token %} {% if form.errors %}
+          {% csrf_token %} 
+          <!-- {% if form.errors %}
           <div class="text-danger">
             <p>Please correct the following Errors</p>
           </div>
@@ -17,8 +18,8 @@
           <div class="alert alert-danger" role="alert">
             {{field.label}}: {{field.errors|striptags}}
           </div>
-          {% endif %} {% endfor %} {% endif %}
-          <div class="form-group mb-3">
+          {% endif %} {% endfor %} {% endif %} -->
+          <!-- <div class="form-group mb-3">
             <input
               type="text"
               name="Firstname"
@@ -39,32 +40,34 @@
               class="form-control"
             />
             <span asp-validation-for="Lastname" class="text-danger"></span>
-          </div>
+          </div> -->
           <div class="form-group mb-3">
-            <input
+            <!-- <input
               type="text"
               name="Username"
               value=""
               placeholder="Username"
               asp-for="Username"
               class="form-control"
-            />
+            /> -->
+          {{form.username}}
             <span asp-validation-for="Username" class="text-danger"></span>
           </div>
           <div class="form-group row mb-3">
             <div class="col-md-12">
-              <input
+              <!-- <input
                 type="email"
                 name="email"
                 value=""
                 placeholder="Email"
                 asp-for="email"
                 class="form-control"
-              />
+              /> -->
+             {{form.email}}
               <span asp-validation-for="email" class="text-danger"></span>
             </div>
           </div>
-          <div class="form-group row mb-3">
+          <!-- <div class="form-group row mb-3">
             <div class="col-md-12">
               <input
                 type="text"
@@ -89,8 +92,8 @@
               />
               <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
-          </div>
-          <div class="form-group row mb-3">
+          </div> -->
+          <!-- <div class="form-group row mb-3">
             <div class="col-md-12">
               <input
                 type="text"
@@ -115,8 +118,8 @@
               />
               <span asp-validation-for="Country" class="text-danger"></span>
             </div>
-          </div>
-          <div class="form-group row mb-3">
+          </div> -->
+          <!-- <div class="form-group row mb-3">
             <div class="col-md-12">
               <input
                 type="text"
@@ -128,31 +131,33 @@
               />
               <span asp-validation-for="PostalCode" class="text-danger"></span>
             </div>
-          </div>
+          </div> -->
 
           <div class="form-group row mb-3">
             <div class="col-md-12">
-              <input
+              <!-- <input
                 type="password"
                 name="Password"
                 value=""
                 placeholder="Password"
                 asp-for="Password"
                 class="form-control"
-              />
+              /> -->
+              {{form.password1}}
               <span asp-validation-for="Password" class="text-danger"></span>
             </div>
           </div>
           <div class="form-group row mb-3">
             <div class="col-md-12">
-              <input
+              <!-- <input
                 type="password"
                 name="ConfirmPassword"
                 value=""
                 placeholder="Confirm Password"
                 asp-for="ConfirmPassword"
                 class="form-control"
-              />
+              /> -->
+              {{form.passowrd2}}
               <span
                 asp-validation-for="ConfirmPassword"
                 class="text-danger"
@@ -191,9 +196,9 @@
     <br />
     <br />
     <div class="text-center">
-      <a href="Index"><strong>BACK TO HOME</strong></a>
+      <a href="{% url 'home' %}"><strong>BACK TO HOME</strong></a>
     </div>
   </div>
 </div>
 
-{%endblock%}
+{% endblock %}

@@ -2,6 +2,7 @@ from django.http.response import JsonResponse
 from django.shortcuts import get_object_or_404, render
 from .cart import Cart
 from products.models import Product
+import json
 
 # Create your views here.
 def cart_view(request):
@@ -16,6 +17,14 @@ def cart_view_add(request):
         cart_session.add(product=product)
         response = JsonResponse({"test": "data"})
         return response
+
+
+def cart_view_update(request):
+    data = json.loads(request.data)
+    productId = data["productid"]
+    action = data["action"]
+    response = JsonResponse({"test": "data"}, safe=False)
+    return response
 
 
 def cart_view_delete(request):

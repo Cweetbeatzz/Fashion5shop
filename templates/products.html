@@ -24,7 +24,7 @@
         >
         <h6 class="text-info"><strong>${{ item.price|upper}}</strong></h6>
       </span>
-      <a class="btn btn-dark btn-sm m-0" id="addtocart" value="{{item.id}}"
+      <button class="btn btn-dark btn-sm m-0 addtocart" id="addtocart" value="{{item.id}}" data-action="add" data-product="{{item.id}}"
         >ADD TO CART
         <svg
           xmlns="http://www.w3.org/2000/svg "
@@ -39,7 +39,7 @@
                            4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z "
           />
         </svg>
-      </a>
+      </button>
     </div>
     {% endfor %}
   </div>
