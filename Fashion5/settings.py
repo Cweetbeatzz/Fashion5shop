@@ -33,8 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "home",
-    "login",
-    "register",
+    "accounts2",
     "categories",
     "products",
     "contact",

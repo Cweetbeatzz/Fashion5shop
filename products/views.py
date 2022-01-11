@@ -15,6 +15,11 @@ def products_view(request):
     return render(request, "products.html", {"products": products})
 
 
+def products_search_view(request):
+    search = models.Product.objects.all()
+    return render(request, "search.html", {"search": search})
+
+
 ###############################################################
 def products_details_view(request, slug):
     productsDetails = get_object_or_404(models.Product, slug=slug, in_stock=True)

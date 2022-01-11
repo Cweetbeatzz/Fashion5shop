@@ -7,7 +7,7 @@ app_name = "categories"
 urlpatterns = [
     path("", views.categories_view, name="categories"),
     path(
-        "category/<slug:category_slug>/",
+        "<slug:category_slug>/",
         products_by_category_view,
         name="products_by_category",
     ),

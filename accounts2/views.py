@@ -11,19 +11,19 @@ def register_view(request):
 ############################################
 
 
-def register_users(_users):
-    users = Register()
-    _users = users.firstname
+def login_view(request):
+    return render(request, "login.html")
+
+
+############################################
+
+
+def update_users_view(request):
     pass
 
 
 ############################################
 
 
-def update_users():
-    pass
-
-
-############################################
-def delete_users():
+def delete_users_view(request):
     pass
