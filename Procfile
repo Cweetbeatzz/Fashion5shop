@@ -1,0 +1,1 @@
+web: gunicorn Fashion5.wsgi --log-file -
