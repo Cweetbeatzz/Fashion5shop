@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-_v(1y219hnfxomg8%^^2)z4fzo-q4zbg0tn)t)t_c=fk-s!ex6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["fashion5.herokuapp.com", "127:0.0.1"]
+ALLOWED_HOSTS = ["fashion5.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     # white noise heroku deploy middlewaree
-    "whitenoise.middlware.WhiteNoiseMiddelware",
+    # "whitenoise.middlware.WhiteNoiseMiddelware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
