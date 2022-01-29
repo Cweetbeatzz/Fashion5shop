@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+
+# import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-_v(1y219hnfxomg8%^^2)z4fzo-q4zbg0tn)t)t_c=fk-s!ex6"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["fashion5.herokuapp.com", "127.0.0.1"]
 
@@ -33,7 +35,6 @@ ALLOWED_HOSTS = ["fashion5.herokuapp.com", "127.0.0.1"]
 
 INSTALLED_APPS = [
     "home",
-    "accounts2",
     "categories",
     "products",
     "contact",
@@ -51,7 +52,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    # white noise heroku deploy middlewaree
     # "whitenoise.middlware.WhiteNoiseMiddelware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -164,3 +164,5 @@ LOGIN_URL = "/account/login"
 
 # # email settings
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+# django_heroku.settings(locals())

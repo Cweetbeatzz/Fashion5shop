@@ -15,7 +15,7 @@ def cart_view_add(request):
         product_id = int(request.POST.get("productid"))
         product = get_object_or_404(Product, id=product_id)
         cart_session.add(product=product)
-        response = JsonResponse({"test": "data"})
+        response = JsonResponse({"product": product.name})
         return response
 
 

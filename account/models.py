@@ -41,12 +41,14 @@ class UserBase(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_("email address"), null=False, unique=True)
     phone = models.CharField(max_length=15, null=False)
     state = models.CharField(max_length=100, null=False)
+    # delivery details
     country = CountryField()
     address_line_1 = models.CharField(max_length=150, blank=True)
     address_line_2 = models.CharField(max_length=150, blank=True)
     postalcode = models.CharField(max_length=12, null=False)
     is_active = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
+    block_user_account = models.BooleanField(default=False)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
 

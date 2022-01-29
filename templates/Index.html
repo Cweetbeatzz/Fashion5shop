@@ -479,4 +479,24 @@
   </div>
 </div>
 <!-- @*#######################################################################*@ -->
+<script>
+  $(document).on("click", "#addtocart", function (e)
+  {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "{% url 'cart:cart_view_add'%}",
+      data: {
+        productid: $("#addtocart").val(),
+        csrfmiddlewaretoken: "{{csrf_token}}",
+        action: "post",
+      },
+      success: function (json)
+      {
+        console.log(json)
+      },
+      error: function (xhr, errmsg, err) { },
+    });
+  });
+</script>
 {% endblock %}
