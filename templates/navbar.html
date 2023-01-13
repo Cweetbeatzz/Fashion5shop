@@ -17,10 +17,10 @@
                 
                     {% if user.is_authenticated %} {% else %}
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="{% url 'accounts2:login' %}"><strong>LOGIN</strong></a>
+                        <a class="nav-link text-dark" href="account/login"><strong>LOGIN</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="{% url 'accounts2:register'%}"><strong>REGISTER</strong></a>
+                        <a class="nav-link text-dark" href="{% url 'account:register'%}"><strong>REGISTER</strong></a>
                     </li>
                     {% endif %}
                     <li class="nav-item">

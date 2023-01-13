@@ -14,6 +14,7 @@ from django.contrib.auth import login, logout
 
 ##########################################################################
 
+
 @login_required
 def dashboard(request):
     return render(request, "dashboard.html", {"section": "profile", "orders": "orders"})

@@ -26,7 +26,6 @@ urlpatterns = [
     path("privacy/", include("privacy.urls")),
     path("products/", include("products.urls", namespace="products")),
     path("account/", include("account.urls", namespace="account")),
-    path("accounts2/", include("accounts2.urls", namespace="account2")),
     path("navbar/", include("navbar.urls")),
     path("category/", include("categories.urls")),
     path("cart/", include("cart.urls", namespace="cart")),
